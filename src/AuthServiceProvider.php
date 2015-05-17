@@ -1,4 +1,4 @@
-<?php namespace HaziCms\Auth;
+<?php namespace HaziCms;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -12,9 +12,8 @@ class AuthServiceProvider extends ServiceProvider
 	 */
 	public function boot()
 	{
-		$this->publishes([
-			__DIR__.'/Config/Http/Middleware' => base_path('app/Http/Middleware')
-		]);
+		// dd("a");
+		
 	}
 
 	/**
@@ -23,6 +22,12 @@ class AuthServiceProvider extends ServiceProvider
 	 * @return void
 	 */
 	public function register()
-	{}
+	{
+		echo("b");
+		$this->publishes([
+			__DIR__.'/Config/Http/Middleware' => base_path('app/Http/Middleware')
+		]);
+		echo("c");
+	}
 
 }
