@@ -1,0 +1,24 @@
+{
+    "name": "hazicms/auth",
+    "description": "Basic authentication with CRUD for users,roles and permissions.",
+    "keywords": ["laravel", "CRUD", "auth", "CMS"],
+    "homepage": "https://github.com/hazicms/auth",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Aitor Ibañez",
+            "email": "freelance@aitoribanez.com",
+            "homepage": "http://aitoribanez.com",
+            "role": "Developer"
+        }
+    ]
+    "require": {
+        "php": ">=5.4.0",
+        "bican/roles": "1.6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "HaziCms\\": "src"
+        }
+    }
+}
