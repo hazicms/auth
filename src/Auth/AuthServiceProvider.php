@@ -25,7 +25,8 @@ class AuthServiceProvider extends ServiceProvider
 	{
 		echo("b");
 		$this->publishes([
-			__DIR__.'/Config/Http/Middleware' => base_path('app/Http/Middleware')
+			__DIR__.'/Config/Http/Middleware' => base_path('app/Http/Middleware'),
+			__DIR__.'/Config/Database/Migrations' => base_path('app/Database/Migrations')
 		]);
 		echo("c");
 	}
