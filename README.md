@@ -29,22 +29,14 @@ Steps to Get Started
 
         php artisan vendor:publish --provider="HaziCms\Generator\Generator\GeneratorServiceProvider"
 
-        php artisan vendor:publish
+5. Add those lines to ```app\Http\Kernel.php``` file:
 
-        php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLaravel5"
-
-4. Modify ```app\Http\Kernel.php``` file:
-
-    Add :
         protected $routeMiddleware = [
             'hazicms.basic' => 'HaziCms\Http\Middleware\AuthBasicMiddleware',
         ];
-5. Add middleware to route: 
+5. Add middleware to controller's __construct() method: 
 
-    Route::group(['prefix' => 'admin', ```'middleware' => 'hazicms.basic'``` ,'namespace' => 'HaziCms\\Modules\Blog\Http\Controllers'], function()
-    {
-        Route::resource('posts', 'PostController');
-    });
+        $this->middleware('hazicms.basic');
 
 6. You are ready! :-)
 

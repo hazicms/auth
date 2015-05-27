@@ -1,4 +1,4 @@
-<?php namespace HaziCms;
+<?php namespace HaziCms\Auth;
 
 use Illuminate\Support\ServiceProvider;
 
